@@ -1,0 +1,2 @@
+{"timestamp": "2026-07-19T17:30:32.049222+00:00", "text": "Magnitude 7 earthquake strikes, buildings collapse, rescue teams deployed", "keyword": "earthquake", "label": 1, "probability": 0.7040499565197088, "model_name": "baseline"}
+{"timestamp": "2026-07-19T17:30:32.255534+00:00", "text": "this exam was an absolute disaster lol", "keyword": null, "label": 1, "probability": 0.5214936575275896, "model_name": "baseline"}

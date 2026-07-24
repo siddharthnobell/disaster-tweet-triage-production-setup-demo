@@ -1,0 +1,11 @@
+pandas==2.3.3
+numpy==2.4.1
+scikit-learn==1.8.0
+scipy==1.17.1
+sentence-transformers==5.6.0
+fastapi==0.135.2
+uvicorn==0.42.0
+joblib==1.5.3
+pydantic==2.12.5
+pytest==9.1.1
+httpx==0.28.1

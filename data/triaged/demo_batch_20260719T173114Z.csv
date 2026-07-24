@@ -1,0 +1,7 @@
+id,keyword,text,probability,label
+1,earthquake,"7.2 magnitude earthquake hits coastal region, thousands evacuated",0.5372215973234961,1
+2,fire,Wildfire forces evacuation of entire mountain town overnight,0.532115054458626,1
+3,,just beat my personal best at the gym today feeling great,0.27036031870129557,0
+4,flood,Flash floods sweep through downtown streets after record rainfall,0.5743816863165061,1
+5,,"this traffic jam is a total disaster, going to be late again",0.5265851086032113,1
+6,,can't believe how good this new pizza place is,0.26537474052089827,0
