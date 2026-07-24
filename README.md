@@ -233,6 +233,21 @@ p=0.52) — a genuine baseline limitation (surface-level lexical cues on
 "disaster"-adjacent phrasing), not a service bug. Check `logs/predictions.jsonl`
 afterwards — every request above is in there with a timestamp.
 
+**Latency benchmark:**
+`python bench_latency.py`
+Sends 50 requests to `/predict` (5 rounds through 10 varied sample tweets) and reports timing:
+requests sent : 50
+successful : 50
+errors : 0
+avg latency : <your avg> ms
+p50 latency : <your p50> ms
+p95 latency : <your p95> ms
+p99 latency : <your p99> ms
+min / max : <min> ms / <max> ms
+
+Numbers will vary by machine — report whatever your run actually shows, not the placeholders above.
+
+
 **Batch ingestion** (stop the server first, or run in a third terminal —
 `ingest.py` doesn't need it running, it calls the model in-process):
 
@@ -258,6 +273,15 @@ python -m scripts.ingest
 demo_batch.csv: scored 6 tweets, 4 flagged as real disasters
   -> ...\data\triaged\demo_batch_<timestamp>.csv
 ```
+On Windows, if you're re-running against a file that's already sitting in
+`data/incoming/processed/` from a prior run, you'll hit:
+FileExistsError: [WinError 183] Cannot create a file when that file already exists
+This is because `Path.rename()` doesn't overwrite existing files on
+Windows (it does on macOS/Linux). Fix: delete the stale file first
+(`rm data/incoming/processed/<name>.csv`) and re-run — or, for a
+permanent fix, change `scripts/ingest.py`'s `path.rename(...)` to
+`path.replace(...)`, which overwrites on all platforms.
+
 (The timestamp in the filename will be whatever moment you ran it — that's
 expected, not a discrepancy.) `data/incoming/demo_batch.csv` has moved to
 `data/incoming/processed/demo_batch.csv`; running `ingest` again immediately
