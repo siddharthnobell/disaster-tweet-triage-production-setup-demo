@@ -1,0 +1,42 @@
+{
+  "n_reference": 5245,
+  "n_current": 60,
+  "insufficient_sample": false,
+  "feature_flags": {
+    "word_count": {
+      "test": "ks_2samp",
+      "statistic": 0.08841754051477597,
+      "p_value": 0.7088398736669501,
+      "flagged": false
+    },
+    "hashtag_count": {
+      "test": "ks_2samp",
+      "statistic": 0.048427073403241185,
+      "p_value": 0.9979102903833202,
+      "flagged": false
+    },
+    "mention_count": {
+      "test": "ks_2samp",
+      "statistic": 0.0340324118207817,
+      "p_value": 0.9999986658020779,
+      "flagged": false
+    },
+    "has_url": {
+      "test": "rate_diff",
+      "reference_rate": 0.5248808388941849,
+      "current_rate": 0.6666666666666666,
+      "diff": 0.14178582777248172,
+      "flagged": false
+    },
+    "has_keyword": {
+      "test": "rate_diff",
+      "reference_rate": 0.9925643469971401,
+      "current_rate": 1.0,
+      "diff": 0.0074356530028598655,
+      "flagged": false
+    }
+  },
+  "positive_rate_reference": 0.42573879885605337,
+  "positive_rate_current": 0.4666666666666667,
+  "positive_rate_flagged": false
+}
